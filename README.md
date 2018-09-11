@@ -9,8 +9,8 @@
 
 ## Mise en place Github
 1. Obtention du dossier sur votre compte et machine
-Obtenir une copie du projet sur votre compte github : `fork`
-Créer une copie locale du projet git sur votre ordinateur :
+Obtenir une copie du projet sur votre compte github : `fork`.
+Pour créer une copie locale du projet git sur votre ordinateur :
 ```bash
 $ git clone https://github.com/NomDeCompte/Projet-DAC
 ```
