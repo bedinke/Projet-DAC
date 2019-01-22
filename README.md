@@ -1,11 +1,11 @@
 # DAC Project
 
 ## Authors:
--Kévin BEDIN
--Quentin DUCASSE
--Steve Carlson KASSE MIKUI
--Guillaume LE BOUCHER
--Luc LONGIN
+- Kévin BEDIN
+- Quentin DUCASSE
+- Steve Carlson KASSE MIKUI
+- Guillaume LE BOUCHER
+- Luc LONGIN
 
 ## Mise en place Github
 1. Obtention du dossier sur votre compte et machine
