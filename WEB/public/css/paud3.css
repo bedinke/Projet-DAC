@@ -1,0 +1,375 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue";
+	background-color: #005a00;
+	color: white;
+}
+
+#menubar img {
+ 	width: 60px;
+}
+
+#logobar {
+	height: 180px;
+	padding-top: 130px;
+}
+
+#logobar .user {
+	padding: 25px 0 0 130px;
+}
+
+#logobar .user img {
+	height: 120px;
+	margin-top: 8px;
+}
+
+#logobar .user p {
+	color: white;
+	font-style: normal;
+	font-size: 40px;
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+#logobar .user {
+	text-decoration: none;
+	
+}
+
+#logobar .logo img {
+	height: 160px;
+	width: auto;
+	margin-left: 100px;
+}
+
+#logobar .userpic {
+	margin-left: 40px;
+}
+
+#menubar {
+	font-style: none;
+	list-style: none;
+	margin-top: 250px;
+	font-size: 2.5em;
+}
+
+#menubar img {
+	height: 90px;
+	width: auto;
+}
+
+#menubar a {
+	color: white;
+	text-decoration: none;
+	padding: 30px 0 30px 40px;
+	width: 100%;
+}
+
+#menubar a:hover {
+	background-color: #31A231;
+}
+
+#menubar span {
+	position: relative;
+	top: -25px;
+	margin-left: 20px;
+}
+
+#menubar div {
+	padding: 0px 0 0px 150px;
+}
+
+#boxmenu {
+	padding: 150px 0 0 100px;
+}
+
+#boxmenu #datebox {
+	background-color: #001e00;
+	opacity: 0.9;
+	padding-right: 100px;
+	height: 530px;
+}
+
+#boxmenu #datebox .time {
+	font-size: 200px;
+	margin: 0;
+	padding: 40px 0 0 60px;
+}
+
+#boxmenu #datebox .current_date {
+	font-size: 80px;
+	margin: 0;
+}
+
+#boxmenu #datebox .current_day {
+	display: block;
+	padding-left: 80px;
+	margin-top: -20px;
+}
+
+#boxmenu #datebox .current_month_year {
+	font-size: 50px;
+	padding: 0;
+	margin: 0;
+	padding-left: 80px;
+	position: relative;
+	top: -20px;
+}
+
+#boxmenu #weather {
+	padding-top: 80px;
+	padding-left: 80px;
+	margin-left: 30px;
+}
+
+#boxmenu .current_temperature {
+	font-size: 8em;
+	margin: 0;
+	padding-top: 5px;
+	margin-left: 200px;
+}
+
+#boxmenu #weather img {
+	height: 100px;
+	width: auto;
+}
+
+#boxmenu #weather .current_city {
+	font-size: 35px;
+}
+
+#boxmenu #plantbox {
+	background-color: #001e00;
+	opacity: 0.9;
+	margin-left: 50px;
+}
+
+#boxmenu #plantbox .plant_view {
+	
+	width: 1000px;
+	padding: 30px;
+	height: 850px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#boxmenu #plantbox .plant_day {
+	font-size: 50px;
+	margin: 0;
+	padding: 5px 0 0 50px;
+}
+
+#boxmenu #plantbox .plant_day_num {
+	font-size: 80px;
+	margin: 0;
+	padding: 0 0 20px 50px;
+}
+
+#boxmenu #plantbox:hover {
+	background-color: #31A231;
+}
+
+
+#boxmenu #plantbox .camera_icon {
+	height: 160px;
+	width: auto;
+	margin: 0;
+	padding: 20px 50px 0 0;	
+}
+
+#boxmenu #plantbox .camera_icon:hover {
+	cursor: pointer;
+}
+
+
+#boxmenu #statsbox {
+	opacity: 0.9;
+	margin-left: 50px;
+	background-color: #001e00;
+}
+
+#boxmenu #statsbox a {
+	font-style: none;
+	color: white;
+	text-decoration: none;
+	padding: 19px;
+}
+
+#boxmenu #statsbox a:hover {
+	background-color: #31A231;
+}
+
+#boxmenu #statsbox .img_cont {
+	padding: 50px;
+
+}
+
+#boxmenu #statsbox img {
+	height: 120px;
+	width: auto;
+}
+
+#boxmenu #statsbox p {
+	padding: 20px 100px 0 150px;
+}
+
+#boxmenu #statsbox .update_title {
+	font-size: 45px;
+	font-style: italic;
+}
+
+#boxmenu #statsbox .update_value {
+	font-size: 50px;
+	margin-top: 10px;
+}
+
+#boxmenu #update_temp img {
+	margin-left: 35px;
+	width: auto;
+}
+
+#boxmenu #plant_info {
+	background-color: #001e00;
+	opacity: 0.9;
+	margin-top: -465px;
+	/*padding-right: 22px;*/
+	height: 890px;
+	padding-right: 40px;
+}
+
+#plant_info .plant_info_h1 {
+	font-size: 100px;
+	margin: 0;
+	padding: 50px 0 0 50px;
+}
+
+#plant_info .plant_name {
+	font-size: 70px;
+	font-style: italic;
+	margin: 0;
+	padding: 0;
+	padding-left: 50px;
+	padding-bottom: 40px;
+}
+
+#plant_info .plant_info_pic_cont {
+	padding: 50px;
+	padding-left: 190px;
+	padding-top: 60px;
+}
+
+#plant_info #plant_info_pic {
+	height: auto;
+	width: 190px;
+}
+
+#plant_info img {
+	height: 90px;
+	width: auto;
+}
+
+#plant_info .plant_info_h2 {
+	font-size: 60px;
+}
+
+#plant_info .plant_info_h3 {
+	font-size: 45px;
+	margin: 0;
+	padding: 0;
+	font-style: italic;
+}
+
+#plant_info .plant_needs_text {
+	margin: 0;
+	padding: 0;
+	font-size: 35px;
+}
+
+#plant_info .plant_needs {
+	padding: 10px 0 10px 50px;
+	margin-top: 30px;
+}
+
+#plant_howto {
+	margin-top: 48px;
+	margin-right: -40px;
+
+}
+
+#plant_info #plant_howto p {
+	font-size: 35px;
+	padding: 30px;
+}
+
+#plant_info:hover #plant_howto {
+	background-color: #31A231;
+}
+
+#plant_howto:hover {
+	cursor: pointer;
+}
+
+#status {
+	background-color: #001e00;
+	opacity: 0.9;
+	margin-left: 55px;
+	margin-top: 50px;
+	padding-right: 160px;
+	padding-bottom: 50px;
+}
+
+#status #status_title {
+	font-size: 100px;
+	margin: 0;
+	padding: 50px 0 0 50px;
+}
+
+#status .measurements_div {
+	padding-left: 80px;
+	padding-bottom: 30px;
+}
+
+#status .measurements_title {
+	font-size: 50px;
+	margin: 0;
+	padding: 30px 0 30px 0;
+	font-style: italic;
+} 
+
+#status .measurements_values .val_theor, .val_paud {
+	margin: 0;
+	padding: 0;
+}
+
+.val_paud {
+	font-size: 100px;
+	margin-left: 50px;
+	padding: 0;
+}
+
+.val_theor {
+	text-align: right;	
+	font-size: 40px;
+	position: relative;
+	top: 80px;
+}
+
+.arrow {
+	height: 25px;
+	width: 30px;
+	position: relative;
+	left: -40px;
+	top: 28px;
+}
+
+
+
+
+
+
+
+
+
+
+
