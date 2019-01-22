@@ -4,9 +4,11 @@ html, body {
 	font-family: "Helvetica Neue";
 	background-color: #005a00;
 	color: white;
+	zoom: 72%;
+
 }
 
-#menubar img {
+#menubar  img {
  	width: 60px;
 }
 
@@ -355,12 +357,32 @@ html, body {
 	top: 80px;
 }
 
-.arrow {
+#lum_measurements .arrow {
 	height: 25px;
 	width: 30px;
 	position: relative;
-	left: -40px;
-	top: 28px;
+	left: -55px;
+	top: 20px;
+}
+
+.lux {
+	font-size: 45px;
+	padding-left: 10px;
+}
+
+#hum_measurements .arrow {
+	height: 25px;
+	width: 30px;
+	position: relative;
+	left: -35px;
+	top: 20px;
+}
+
+.pourcentage {
+	font-size: 45px;
+	position: relative;
+	top: 50px;
+	left: 6px;
 }
 
 

@@ -3,6 +3,27 @@ html(lang='en')
   head
     link(rel='stylesheet', type='text/css', href='http://localhost:7000/css/bootstrap-grid.min.css')
     link(rel='stylesheet', type='text/css', href='http://localhost:7000/css/paud3.css')
+    meta(http-equiv='refresh', content='60')
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js')
+    script.
+      var inst = setInterval(change, 1000);
+
+      function change() {
+        d = new Date();
+        var min = (d.getMinutes()<10?'0':'') + d.getMinutes();
+        var hour = (d.getHours()<10?'0':'') + d.getHours();
+        document.getElementById("time_box").innerHTML = hour + ':' + min;
+        
+      }
+
+      const socket = io();
+      socket.on('datetime', function(message) {
+        alert(message);
+        //document.getElementById("time_box").innerHTML = message[4] + ':' + message[5];
+
+      });
+
+
   body
     #container.container-fluid
       #logobar.row
@@ -10,7 +31,7 @@ html(lang='en')
           a.user.row(href='')
             .col-1.userpic
               img(src='./images/website/user.png', alt='userpic')
-            p.col-7 Bonjour, Paul
+            p.col-7 Bonjour, #{prenom}
         .col-7.align-self-center
           a.logo(href='')
             img(src='./images/website/paudus.png', alt='logo')
@@ -36,22 +57,22 @@ html(lang='en')
           #row1.row
             #datebox.col-md-auto
               .datebox_row1.row
-                p.time.col #{date[4]}:#{date[5]}
+                p#time_box.time.col #{date[4]}:#{date[5]}
                 #weather.col
                   img(src='./images/weather/cloudy.png', alt='current_weather')
-                  p.current_city Brest, France
+                  p.current_city #{ville}, #{pays}
               .datebox_row2.row
                 p.current_date.col-auto
                   span.current_day #{date[2]}
                   span.current_month_year #{date[3]} #{date[1]} #{date[0]}
-                p.current_temperature.col 16°
+                p.current_temperature.col #{weather}°
             #plantbox.col-md-auto
               .row.plantbox_row1
                 img.plant_view(src='./images/plants/radish/radish_ex2.jpg', alt='ma plante')
               .row.plantbox_row2
                 .col-auto.mr-auto
                   p.plant_day Jour
-                  p.plant_day_num 12
+                  p.plant_day_num #{nb_jours_plante}
                 .col-auto
                   img.camera_icon(onmouseover="this.src='./images/website/camerahover.png';", onmouseout="this.src='./images/website/camera.png';", src='./images/website/camera.png', alt='camera')
               //
@@ -64,31 +85,31 @@ html(lang='en')
                   img(src='./images/website/temperature.png', alt='temp_logo')
                 p.update_temp_date.col-md-10
                   span.row.update_title Température intérieure
-                  span.row.update_value 19°
+                  span.row.update_value #{temperature_plante}°
               a#update_water.row(href='')
                 .img_cont.col-md-2
                   img(src='./images/website/watering.png', alt='water_logo')
                 p.update_water_date.col-md-10
                   span.row.update_title Dernier arrosage
-                  span.row.update_value Il y a 30 min
+                  span.row.update_value Il y a #{dernier_arrosage}
               a#update_heat.row(href='')
                 .img_cont.col-md-2
                   img(src='./images/website/heat.png', alt='heat_logo')
                 p.update_heat_date.col-md-10
                   span.row.update_title Dernier chauffage
-                  span.row.update_value Il y a 15 min
+                  span.row.update_value Il y a #{dernier_chauffage}
               a#update_cold.row(href='')
                 .img_cont.col-md-2
                   img(src='./images/website/cold.png', alt='cold_logo')
                 p.update_cold_date.col-md-10
                   span.row.update_title Dernière ventilation
-                  span.row.update_value Il y a 1 min
+                  span.row.update_value Il y a #{derniere_ventilation}
           .row2.row
             #plant_info.col-lg-auto
               .row
                 .col-md-auto
                   p.plant_info_h1 Ma plante
-                  p.plant_name Radis
+                  p.plant_name #{plante}
                 .col-md-auto.plant_info_pic_cont
                   img#plant_info_pic(src='./images/plants/radish/radish_id.jpg', alt='ma plante')
               #plant_needs
@@ -98,21 +119,21 @@ html(lang='en')
                   .col-md-9
                     p.plant_info_h3 Exposition
                     p.plant_needs_text
-                      | Endroit chaud et ensoleillé
+                      | #{plante_exposition}
                 #plant_needs_water.plant_needs.row
                   .col-md-2
                     img(src='./images/website/waterdrop.png', alt='waterdrop')
                   .col-md-9
                     p.plant_info_h3 Arrosage
                     p.plant_needs_text
-                      | Régulièrement mais pas trop
+                      | #{plante_arrosage}
                 #plant_needs_soil.plant_needs.row
                   .col-md-2
                     img(src='./images/website/soil.png', alt='soil')
                   .col-md-9
                     p.plant_info_h3 Terreau
                     p.plant_needs_text
-                      | Riche et bien drainé
+                      | #{plante_terreau}
               #plant_howto.row.justify-content-center
                 p.plant_info_h3 + Plus d'informations
             #status.col-lg-auto
@@ -121,12 +142,17 @@ html(lang='en')
                 #lum_measurements.measurements_div.col-lg-auto
                   p.measurements_title.row.justify-content-end Luminosité
                   .measurements_values.row
-                    p.val_paud 54
-                    p.val_theor /60
+                    p.val_paud #{suivi_luminosite}
+                      span.lux lux 
+                    <!--p.val_theor /60-->
                     img.arrow(src='./images/website/arrow_up.png', alt='arrow_up')
                 #hum_measurements.measurements_div.col-lg-auto
                   p.measurements_title.row.justify-content-end Humidité
                   .measurements_values.row
-                    p.val_paud 51
-                    p.val_theor /46
+                    p.val_paud #{suivi_humidite}
+                    span.pourcentage %
+                    <!--p.val_theor /46-->
                     img.arrow(src='./images/website/arrow_down.png', alt='arrow_down')
+    script.
+      var socket = io()
+
