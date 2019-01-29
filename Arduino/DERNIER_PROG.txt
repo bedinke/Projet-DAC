@@ -1,0 +1,8 @@
+1 - Test_temperature.ino                #Test du capteur DS18B20 inox en port 1wire
+2 - Test_temperature_apres_requete.ino      #Test du capteur DS18B20 inox après requête série "T1$"
+3 - DHT22.ino                              #Test capteur DHT22 
+4 - Test_temperature_humidite_apres_requete.ino #Test capteurs DHT22 et DS18B20 après requeête "Hum$" , "T2$" (pour DHT22) et "T1$"
+5 - Mesure_humidite_3_pots.ino #Test des capteurs de mesure de l'humidité de le terre, fabriqués.
+6 - Test_temperature_humidite_lum_ventil_apres_requete.ino ##Test capteurs DHT22 et DS18B20 après requeête "Hum$" , "T2$" (pour DHT22) et "T1$". Plus test activation/desactivation ventilateurs après requêtes "Ventil_ON$"/"Ventil_OFF$"
+
+
