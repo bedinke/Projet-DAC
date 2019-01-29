@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link rel="stylesheet" type="text/css" href="../public/css/bootstrap-grid.min.css">
+		<link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="../public/css/parameters_menu.css">
 	</head>
 	<body>
 		<div id="container" class="container-fluid">
+			<!-- Upper bar: Profile+logo -->
 			<div id="logobar" class="row">
 				<div class="col-5 align-self-start">
 					<a class="user row" href="">
@@ -21,7 +22,11 @@
 					</a>
 				</div>
 			</div>
+			
+			<!-- The rest of the page: Side navigation bar + actual view -->
 			<div class="row therest">
+
+				<!-- Side navigation bar -->
 				<div id="menubar" class="col-md-2">
 					<div class="row">
 						<a href="">
@@ -55,9 +60,9 @@
 					</div>
 				</div>
 
-
-
+				<!-- Actual page content: Parameters here -->
 				<div id="param_menu" class="container-fluid col-md-10">
+					
 					<!-- User parameters box -->
 					<div id="user_box" class="container">
 				
@@ -129,9 +134,21 @@
 						</div>
 					</div>
 
+					<!-- Button box -->
+					<div id="button_box" class="container">
+						<div id="man_auto_buttons" class="btn-group btn-group-toggle" data-toggle="buttons">
+						  <label class="btn btn-primary active">
+						    <input type="radio" name="options" id="option_auto" autocomplete="off" checked> Automatic
+						  </label>
+						  <label class="btn btn-secondary">
+						    <input type="radio" name="options" id="option_man" autocomplete="off"> Manual
+						  </label>
+						</div>
+					</div>
+					
 				</div>
 				
-			</div>
-		</div>
+			</div> <!-- end of therest -->
+		</div> <!-- end of container -->
 	</body>
 </html>

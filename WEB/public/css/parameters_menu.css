@@ -85,15 +85,29 @@ html, body {
 .parameter_title {
 	display:block;
 	background-color: #001e00;
-	font-size:90px;
+	font-size:75px;
+	padding: 20px 100px 20px 20px;
+	color:white;
+	opacity: 0.9;
 }
 
 .parameter_desc {
 	font-size:45px;
-	font-style:bold;
+	color:white;
 }
 
 .parameter_text {
 	font-size:35px;
 	font-style:italic;	
+	color:white;
 }
+
+
+
+/* Button-related styles */
+#param_menu #man_auto_buttons #option_auto #option_man {
+	font-size:45px;
+}
+
+
+
