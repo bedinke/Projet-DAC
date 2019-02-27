@@ -1,0 +1,113 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue";
+	background-color: #005a00;
+}
+
+/* Logo bar up */
+#logobar {
+	height: 180px;
+	padding-top: 130px;
+}
+
+#logobar .user {
+	padding: 25px 0 0 130px;
+}
+
+#logobar .user img {
+	height: 120px;
+	margin-top: 8px;
+}
+
+#logobar .user p {
+	color: white;
+	font-style: normal;
+	font-size: 40px;
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+#logobar .user {
+	text-decoration: none;
+	
+}
+
+#logobar .logo img {
+	height: 160px;
+	width: auto;
+	margin-left: 100px;
+}
+
+#logobar .userpic {
+	margin-left: 40px;
+}
+
+/*Menu bar on the left */
+#menubar  img {
+ 	width: 60px;
+}
+
+#menubar {
+	font-style: none;
+	list-style: none;
+	margin-top: 250px;
+	font-size: 2.5em;
+}
+
+#menubar img {
+	height: 90px;
+	width: auto;
+}
+
+#menubar a {
+	color: white;
+	text-decoration: none;
+	padding: 30px 0 30px 40px;
+	width: 100%;
+}
+
+#menubar a:hover {
+	background-color: #31A231;
+}
+
+#menubar span {
+	position: relative;
+	top: -25px;
+	margin-left: 20px;
+}
+
+#menubar div {
+	padding: 0px 0 0px 150px;
+}
+
+/* Parameter-related styles */
+.parameter_title {
+	display:block;
+	background-color: #001e00;
+	font-size:75px;
+	padding: 20px 100px 20px 20px;
+	color:white;
+	opacity: 0.9;
+}
+
+.parameter_desc {
+	font-size:45px;
+	color:white;
+}
+
+.parameter_text {
+	font-size:35px;
+	font-style:italic;	
+	color:white;
+}
+
+
+
+/* Button-related styles */
+#param_menu #man_auto_buttons #option_auto #option_man {
+	font-size:45px;
+}
+
+
+
